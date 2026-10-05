@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nagykőrösi Kirándulás</title>
+</head>
+<body>
+    <h1>Nagykőrösi Kirándulás Tájékoztató</h1>
+    <p><b>Kedves diákok!</b> <br> Köszönöm hogy ezt olvasod! Ezen a weboldalon található a <i><a href="https://hu.wikipedia.org/wiki/Nagyk%C5%91r%C3%B6s">nagykőrösi kirándulás</a></i> részletei.</p> 
+    <quote>"A jövő útjai kifürkészhetetlenek" - Juhász Szabolcs kisérő tanár</quote>
+    <img src="Nagykoros.png" alt="Nagykőrös" width="400" height="200">
+    <h3>Programok:</h3>
+    <ol>
+        <li>Indulás: 8:15 a suli elől</li>
+        <li>Érkezés: 9:00 érkezés Nagykőrösre</li>
+        <li>10:00 - 12:00: Gamer room</li>
+        <li>12:00 - 13:00: Gyrospont-os gyrosozás</li>
+        <li>13:00 - 14:00: Driftelgetés a vásártéren egy szuszkával</li>
+        <li>15:00 - 16:30: Hazaút</li>
+    </ol>
+    <h3>Mit hozzatok magatokkal:</h3>
+    <ul>
+        <li>Ruházat: kényelmes cipő, meleg ruha</li>
+        <li>Étel és ital: szendvics, üdítő</li>
+        <li>Országbérlet</li>
+        <li>Diákigazolvány</li>
+        <li>Jókedv ;)</li>
+    </ul>
+    <h3>Tudnivalók</h3>
+    <ul>
+        <li>Indulás: 8:15 a suli elől</li>
+        <li>Várható érkezés: 16:30</li>
+        <li>Kísérő tanár: Juhász Szabolcs (<a href="mailto:juhasz.szabolcs@iskola.hu">juhasz.szabolcs@iskola.hu</a>)</li>
+    </ul>
+
+
+    <h3>Költségek</h3>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+    <table>
+        <tr>
+            <th>Tétel</th>
+            <th>Ár</th>
+        </tr>
+        <tr>
+            <td><img src="csiga_mav.png" alt="Máv" width="40" height="25"> Országbérlet (ha nincs)</td>
+            <td>1890 Ft</td>
+        </tr>
+        <tr>
+            <td>Gyros</td>
+            <td>2500 Ft</td>
+        </tr>
+        <tr>
+            <td>Gamer room</td>
+            <td>1000 Ft</td>
+        </tr>
+        <tr>
+            <td>Szuszka vezetés</td>
+            <td>200 Ft</td>
+        </tr>
+        <tr>
+            <th colspan="2">Összesen: 5590 FT (3700 Ft ha van országbérleted)</th>
+        </tr>
+    </table>
+
+    <h3>Jelentkezés</h3>
+    <form action="https://httpbin.org/post" method="post">
+        <label for="nev">Név:</label><br>
+        <input type="text" id="nev" name="nev" required><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="telefon">Telefonszám:</label><br>
+        <input type="tel" id="telefon" name="telefon" placeholder="+36 30 999 9999" required><br>
+        <label for="berlet">Országbérlet van-e?</label><br>
+        <select id="berlet" name="berlet" required>
+            <option value="igen">Igen</option>
+            <option value="nem">Nem</option>
+        </select><br><br>
+        <label for=""
+        <input type="submit" value="Jelentkezés">
+    </form>
+
+</body>
+<footer>
+    <p>&#xA9 2026 Forró Dominik Adrián</p>
+</footer>
+</html>
