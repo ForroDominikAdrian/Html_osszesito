@@ -4,11 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nagykőrösi Kirándulás</title>
+   
+    <style>
+        body {
+             /* ---------------- Ez a style ai csak gyorsan kellett ------------- */
+            /* A képfájl neve vagy elérési útja */
+            background-image: url('szuszka.jpg');
+            
+            /* Kitölti a teljes képernyőt */
+            background-size: cover;
+            
+            /* Ne ismétlődjön a kép */
+            background-repeat: no-repeat;
+            
+            /* A jobb oldalra igazítjuk a képet, hogy ott legyen a suzuki */
+            background-position: right center;
+            
+            /* Opcionális: rögzíti a hátteret görgetés közben */
+            background-attachment: fixed;
+            color:white;
+        }
+    </style>
 </head>
 <body>
     <h1>Nagykőrösi Kirándulás Tájékoztató</h1>
     <p><b>Kedves diákok!</b> <br> Köszönöm hogy ezt olvasod! Ezen a weboldalon található a <i><a href="https://hu.wikipedia.org/wiki/Nagyk%C5%91r%C3%B6s">nagykőrösi kirándulás</a></i> részletei.</p> 
     <quote>"A jövő útjai kifürkészhetetlenek" - Juhász Szabolcs kisérő tanár</quote>
+    <br>
     <img src="Nagykoros.png" alt="Nagykőrös" width="400" height="200">
     <h3>Programok:</h3>
     <ol>
@@ -73,21 +95,52 @@
     </table>
 
     <h3>Jelentkezés</h3>
-    <form action="https://httpbin.org/post" method="post">
+<form action="https://httpbin.org/post" method="post">
+    <fieldset>
+        <legend>Személyes adatok</legend>
         <label for="nev">Név:</label><br>
         <input type="text" id="nev" name="nev" required><br>
         <label for="email">Email:</label><br>
         <input type="email" id="email" name="email" required><br>
         <label for="telefon">Telefonszám:</label><br>
-        <input type="tel" id="telefon" name="telefon" placeholder="+36 30 999 9999" required><br>
+        <input type="tel" id="telefon" name="telefon" placeholder="+36 30 123 4567" required><br>
+        <label for="fo">Hány fővel jössz (magadat is beleértve):</label><br>
+        <input type="number" id="fo" name="fo" value="1" min="1" max="4" required><br>
+    </fieldset>
+    <fieldset>
+        <legend>Melyik osztályra ülsz a vonaton?</legend>
+        <input type="radio" id="vonat1" name="vonat" value="elso_vonat" checked>
+        <label for="vonat1">Első osztály</label><br>
+        <input type="radio" id="vonat2" name="vonat" value="masodik_vonat">
+        <label for="busz2">Második osztály</label>
+    </fieldset>
+    <fieldset>
+        <legend>Egyéb</legend>
         <label for="berlet">Országbérlet van-e?</label><br>
         <select id="berlet" name="berlet" required>
             <option value="igen">Igen</option>
             <option value="nem">Nem</option>
-        </select><br><br>
-        <label for=""
-        <input type="submit" value="Jelentkezés">
-    </form>
+        </select><br>
+        <label for="etkezes">Étkezés:</label><br>
+        <select id="etkezes" name="etkezes" required>
+            <option value="">-- válassz --</option>
+            <option value="tal">gyros tál</option>
+            <option value="gyros pita">gyros pita</option>
+            <option value="unpopular">hozok magamnak ételt (nem eszek gyorst mert unpopular vagyok)</option>
+        </select><br>
+        <label>Extra program:</label><br>
+        <input type="checkbox" id="program1" name="program" value="varlatogatas">
+        <label for="program1">racsezás suszkával</label><br>
+        <input type="checkbox" id="program2" name="program" value="setahajozas">
+        <label for="program2">Ilyen nincsen! Csak a szuszka!</label><br>
+        <label for="megjegyzes">Megjegyzés:</label><br>
+        <textarea id="megjegyzes" name="megjegyzes" rows="4"></textarea>
+    </fieldset>
+    <br>
+    <input type="checkbox" id="szulo" name="szulo" value="igen" required>
+    <label for="szulo">a szülő tud a kirándulásról</label><br><br>
+    <input type="submit" value="Jelentkezés">
+</form>
 
 </body>
 <footer>
